@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  your-app-name-api:
+    container_name: your-app-name-api
+    hostname: your-app-name-api
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: your-app-name-api:latest
+    restart: unless-stopped
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3333:3333"
+    network_mode: host
+    depends_on: 
+      - your-app-name-pg
+    command: npm run dev
+
+  your-app-name-pg:
+    container_name: your-app-name-pg
+    hostname: your-app-name-pg
+    image: postgres:9.6.16-alpine
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    network_mode: host
+    env_file: .env
