@@ -13,7 +13,8 @@
     "test": "node ace test",
     "test:coverage": "./node_modules/.bin/nyc --reporter=html --reporter=text-summary node ace test",
     "test:coveralls": "./node_modules/.bin/nyc report --reporter=text-lcov | coveralls",
-    "lint": "./node_modules/.bin/eslint ./"
+    "lint": "./node_modules/.bin/eslint ./",
+    "lint:fix": "./node_modules/.bin/eslint ./ --fix"
   },
   "keywords": [
     "adonisjs",
