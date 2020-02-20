@@ -7,6 +7,12 @@
   "version": "0.1.0",
   "adonis-version": "4.1.0",
   "main": "index.js",
+  "keywords": [
+    "adonisjs",
+    "adonis-app",
+    "adonis-api",
+    "adonis-boilerplate"
+  ],
   "scripts": {
     "start": "node server.js",
     "dev": "./node_modules/.bin/adonis serve --dev",
@@ -16,12 +22,6 @@
     "lint": "./node_modules/.bin/eslint ./",
     "lint:fix": "./node_modules/.bin/eslint ./ --fix"
   },
-  "keywords": [
-    "adonisjs",
-    "adonis-app",
-    "adonis-api",
-    "adonis-boilerplate"
-  ],
   "dependencies": {
     "@adonisjs/ace": "^5.0.8",
     "@adonisjs/auth": "^3.0.7",
